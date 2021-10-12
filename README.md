@@ -1,3 +1,12 @@
+# 22apps Changes
+
+As soon as a non-beta v2 of https://github.com/porsager/postgres is released, we can get rid of this fork.
+
+This is simply to patch the stable v1.0.2 with one of the performance fixes that is waiting in v2.
+
+You can check the latest commits to see the code that needed to be changed. Basically, we just want the Postgres server to determine the appropriate number oid, rather than our client, since specifying the wrong ID can wreak havoc on query performance (ie. cause certain indicies to be ignored).
+
+
 <img align="left" width="440" height="140" alt="Fastest full PostgreSQL nodejs client" src="https://raw.githubusercontent.com/porsager/postgres/master/postgresjs.svg?sanitize=true" />
 
 - [🚀 Fastest full featured PostgreSQL client for Node.js](https://github.com/porsager/postgres-benchmarks#results)
